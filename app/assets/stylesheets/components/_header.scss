@@ -1,0 +1,45 @@
+.topnav-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px;
+  border-bottom: solid grey;
+}
+
+.navbar-lhs{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+}
+
+.navbar-contact, .navbar-insta, .navbar-mail {
+  padding: 15px;
+  border-right: solid;
+  border-color: grey;
+}
+
+.navbar-login{
+  padding: 15px;
+  border-left: solid;
+  border-color: grey;
+}
+
+.navbar-rhs{
+  display: flex;
+  align-items: center;
+}
