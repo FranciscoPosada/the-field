@@ -1,0 +1,48 @@
+.topnav-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px;
+  border-bottom: solid grey;
+}
+
+.navbar-lhs{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+}
+
+.navbar-contact, .navbar-insta, .navbar-mail {
+  padding: 15px;
+  border-right: solid;
+  border-color: grey;
+}
+
+.navbar-login, .navbar-stocklist,
+.navbar-dashboard, .navbar-orders,
+.navbar-ordering, .navbar-account,
+.navbar-basket, .navbar-logout{
+  padding: 15px;
+  border-left: solid;
+  border-color: grey;
+  text-decoration: none;
+}
+
+.navbar-rhs{
+  display: flex;
+  align-items: center;
+}
