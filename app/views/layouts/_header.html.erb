@@ -13,12 +13,45 @@
         </a>
       </li>
     </div>
+
     <li class="navbar-brand">
       <h1>THE FIELD</h1>
     </li>
+
     <div class="navbar-rhs">
+      <li class="navbar-stocklist">Stocklist</li>
       <% if user_signed_in? %>
-        <li class="navbar-login">
+        <% if current_user.is_admin? %>
+          <!-- Admin-Specific Links -->
+          <li class="navbar-dashboard">
+            <%= link_to '#', class: "no-link-style" do %>
+              <span>Admin Dashboard</span>
+            <% end %>
+          </li>
+          <li class="navbar-orders">
+            <%= link_to '#', class: "no-link-style" do %>
+              <span>Orders</span>
+            <% end %>
+          </li>
+        <% else %>
+          <!-- User-Specific Links -->
+          <li class="navbar-ordering">
+            <%= link_to '#', class: "no-link-style" do %>
+              <span>Ordering From Us</span>
+            <% end %>
+          </li>
+          <li class="navbar-account">
+            <%= link_to '#', class: "no-link-style" do %>
+              <span>My Account</span>
+            <% end %>
+          </li>
+          <li class="navbar-basket">
+            <%= link_to '#', class: "no-link-style" do %>
+              <span>Shopping Basket</span>
+            <% end %>
+          </li>
+        <% end %>
+        <li class="navbar-logout">
           <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "no-link-style" do %>
             <span>Logout</span>
           <% end %>
@@ -26,7 +59,7 @@
       <% else %>
         <li class="navbar-login">
           <%= link_to new_user_session_path, class: "no-link-style" do %>
-            <span>Login</span>
+            <span><i class="fa-regular fa-user"> </i>Login</span>
           <% end %>
         </li>
       <% end %>

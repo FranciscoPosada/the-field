@@ -32,10 +32,14 @@
   border-color: grey;
 }
 
-.navbar-login{
+.navbar-login, .navbar-stocklist,
+.navbar-dashboard, .navbar-orders,
+.navbar-ordering, .navbar-account,
+.navbar-basket, .navbar-logout{
   padding: 15px;
   border-left: solid;
   border-color: grey;
+  text-decoration: none;
 }
 
 .navbar-rhs{
